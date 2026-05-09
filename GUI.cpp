@@ -325,9 +325,7 @@ void GUI::drawInfoPanel() {
         line.setFont(font);
         line.setString(panelLines[i]);
         line.setCharacterSize(14);
-        line.setFillColor(i == 0
-            ? ACCENT
-            : (panelLines[i].empty() ? TEXT_MUTED : TEXT_WHITE));
+        line.setFillColor(panelLines[i].empty() ? TEXT_MUTED : TEXT_WHITE);
         line.setPosition(px + 20.f, lineY);
         window.draw(line);
         lineY += 24.f;
@@ -465,14 +463,14 @@ void GUI::drawPatientMenu() {
     float cardBottom = cardY + cardH;
 
     // Show ALL pending appointments for this patient
-    std::string apptHint ;
+    std::string apptHint;
     bool anyPending = false;
     sf::Text apptInfo; apptInfo.setFont(font); apptInfo.setString(apptHint);
     apptInfo.setCharacterSize(13); apptInfo.setFillColor(sf::Color(220, 120, 120));
     apptInfo.setPosition(80.f, cardBottom + 6.f); window.draw(apptInfo);
 
     // Show ALL unpaid bills for this patient
-    std::string billHint ;
+    std::string billHint;
     bool anyUnpaid = false;
     sf::Text billInfo; billInfo.setFont(font); billInfo.setString(billHint);
     billInfo.setCharacterSize(13); billInfo.setFillColor(sf::Color(200, 100, 100));
@@ -634,7 +632,7 @@ void GUI::drawForm() {
         && !availableSlots.empty()) {
         float slotBtnW = 90.f, slotBtnH = 36.f, slotGap = 8.f;
         // Place below the single input field
-        float slotY = formStartY + formFieldH + H * 0.06f;
+        float slotY = formStartY + formFieldH + H * 0.02f;
         sf::Text slotLabel; slotLabel.setFont(font);
         slotLabel.setString("Click a slot to select:");
         slotLabel.setCharacterSize(13); slotLabel.setFillColor(TEXT_MUTED);
@@ -975,7 +973,7 @@ void GUI::submitForm() {
         break;
     }
 
-    //Pay Bill
+                              //Pay Bill
     case FORM_PAY_BILL: {
         int billId = atoi(val(0).c_str());
         if (billId <= 0) { formError = "Enter a valid Bill ID."; return; }
@@ -1398,7 +1396,7 @@ void GUI::run()
     Button cancelBtn("Cancel", font, cx + pw * 0.02f, 0.f,
         pw * 0.46f, H * 0.07f, BTN_DARK, BTN_DARK_HOVER);
 
-    // ── Event / render loop ───────────────────────────────────────────────────
+    // Event / render loop 
     while (window.isOpen() && currentScreen != SCREEN_EXIT) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -1507,7 +1505,7 @@ void GUI::run()
             if (currentScreen == SCREEN_FORM) {
                 float formBottom = formStartY
                     + static_cast<float>(formFields.size())
-                    * (formFieldH + H * 0.04f) + H * 0.13f;
+                    * (formFieldH + H * 0.04f) + H * 0.03f;
                 submitBtn.setPosition(cx - pw * 0.5f, formBottom);
                 cancelBtn.setPosition(cx + pw * 0.02f, formBottom);
 
@@ -1522,7 +1520,7 @@ void GUI::run()
                         && bookStep == 3
                         && !availableSlots.empty()) {
                         float slotBtnW = 90.f, slotBtnH = 36.f, slotGap = 8.f;
-                        float slotY = formStartY + formFieldH + H * 0.06f;
+                        float slotY = formStartY + formFieldH + H * 0.02f;
                         for (int s = 0;
                             s < static_cast<int>(availableSlots.size()); s++) {
                             float sx = (W - pw) / 2.f
@@ -2168,7 +2166,7 @@ void GUI::run()
             drawForm();
             float formBottom = formStartY
                 + static_cast<float>(formFields.size())
-                * (formFieldH + H * 0.04f) + H * 0.25f;
+                * (formFieldH + H * 0.04f) + H * 0.03f;
             submitBtn.setPosition(cx - pw * 0.5f, formBottom);
             cancelBtn.setPosition(cx + pw * 0.02f, formBottom);
             submitBtn.draw(window);
