@@ -16,10 +16,10 @@
 |`Appointment`|[Appointment.h](file:///S:/OP/Appointment.h)|[Appointment.cpp](file:///S:/OP/Appointment.cpp)|Overloads: `==` (conflict detection), `<<`|
 |`Bill`|[Bill.h](file:///S:/OP/Bill.h)|[Bill.cpp](file:///S:/OP/Bill.cpp)|Billing charges with status tracking|
 |`Prescription`|[Prescription.h](file:///S:/OP/Prescription.h)|[Prescription.cpp](file:///S:/OP/Prescription.cpp)|Medicines \& notes per appointment|
-|`Storage<T>`|[Storage.h](file:///S:/OP/Storage.h)|*(header-only template)*|Fixed array `T data\\\[100]`, no vectors|
+|`Storage<T>`|[Storage.h](file:///S:/OP/Storage.h)|*(header-only template)*|Fixed array `T data\\\\\\\[100]`, no vectors|
 |`FileHandler`|[FileHandler.h](file:///S:/OP/FileHandler.h)|[FileHandler.cpp](file:///S:/OP/FileHandler.cpp)|Sole class for all file I/O|
 |`Validator`|[Validator.h](file:///S:/OP/Validator.h)|[Validator.cpp](file:///S:/OP/Validator.cpp)|Sole class for all input validation|
-|`HospitalException`|[HospitalException.h](file:///S:/OP/HospitalException.h)|[HospitalException.cpp](file:///S:/OP/HospitalException.cpp)|Base exception with `char\\\[200]` message|
+|`HospitalException`|[HospitalException.h](file:///S:/OP/HospitalException.h)|[HospitalException.cpp](file:///S:/OP/HospitalException.cpp)|Base exception with `char\\\\\\\[200]` message|
 |`FileNotFoundException`|[FileNotFoundException.h](file:///S:/OP/FileNotFoundException.h)|[FileNotFoundException.cpp](file:///S:/OP/FileNotFoundException.cpp)|File open failure|
 |`InsufficientFundsException`|[InsufficientFundsException.h](file:///S:/OP/InsufficientFundsException.h)|[InsufficientFundsException.cpp](file:///S:/OP/InsufficientFundsException.cpp)|Balance too low|
 |`InvalidInputException`|[InvalidInputException.h](file:///S:/OP/InvalidInputException.h)|[InvalidInputException.cpp](file:///S:/OP/InvalidInputException.cpp)|Validation failure|
@@ -87,7 +87,4 @@ g++ -std=c++14 -Wall -o medicore.exe main.cpp MyString.cpp Person.cpp Patient.cp
 |Doctor (Sara)|1|doc456|
 |Doctor (Ali)|2|doc789|
 |Doctor (Ayesha)|3|doc321|
-
-> \\\[!IMPORTANT]
-> Remember to paste your GitHub repository link inside the \\\[README.md](file:///S:/OP/README.md) file before submission.
 
