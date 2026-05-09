@@ -1,0 +1,21 @@
+ 
+2,Fatima Noor,35,F,03012345678,pat456,8000.00
+Patient 1 requested discharge.
+Patient 1 requested discharge.
+Patient 1 requested discharge.
+Patient 1 requested discharge.
+Patient 1 requested discharge.
+Patient 1 requested discharge.
+Patient 1 requested discharge.
+Patient 1 requested discharge.
+DISCHARGE_REQUEST,1
+DISCHARGE_REQUEST,1
+DISCHARGE_REQUEST,1
+DISCHARGE_REQUEST,1
+DISCHARGE_REQUEST,1
+DISCHARGE_REQUEST,1
+DISCHARGE_REQUEST,1
+DISCHARGE_REQUEST,1
+DISCHARGE_REQUEST,1
+3,Usman Khan,45,M,03023456789,pat789,3000.00
+DISCHARGE_REQUEST,1

@@ -1,0 +1,9 @@
+1,1,1,1,15-04-2025,Paracetamol 500mg;Amoxicillin 250mg,Take after meals
+2,1,1,1,02-05-2026,paracetamol,take it 3 times a day
+3,3,1,1,02-05-2026,amoxil,take whenever you want
+4,3,1,1,02-05-2026,hot water,daily after waking up
+5,3,1,1,02-05-2026,bruophen,stop taking depression
+6,5,1,1,03-05-2026,texilex,take it in between your meals
+7,18,1,1,05-05-2026,uska pyaar,jb marzi dill kre
+8,19,1,1,05-05-2026,uska pyaar,jb marzi le lo
+9,21,1,1,08-05-2026,amoxil,between your meals
