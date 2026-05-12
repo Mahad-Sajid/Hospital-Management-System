@@ -1,5 +1,5 @@
 #include "Appointment.h"
-
+using namespace std;
 // Default constructor
 Appointment::Appointment() : appointmentId(0), patientId(0), doctorId(0) {
     date[0] = '\0';
@@ -75,7 +75,7 @@ bool Appointment::operator==(const Appointment& other) const {
 }
 
 // << for formatted output
-std::ostream& operator<<(std::ostream& os, const Appointment& a) {
+ostream& operator<<(ostream& os, const Appointment& a) {
     os << "Appointment ID: " << a.appointmentId
         << " | Patient ID: " << a.patientId
         << " | Doctor ID: " << a.doctorId

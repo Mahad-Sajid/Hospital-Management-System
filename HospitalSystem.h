@@ -14,8 +14,7 @@
 #include "Prescription.h"
 
 // File path constants
-class FilePaths {
-    public:
+struct FilePaths {
     static const char* PATIENTS;
     static const char* DOCTORS;
     static const char* ADMINS;
@@ -27,8 +26,7 @@ class FilePaths {
 };
 
 // Central data container for the entire hospital system
-class HospitalSystem {
-    public:
+struct HospitalSystem {
     Storage<Patient> patients;
     Storage<Doctor> doctors;
     Storage<Admin> admins;

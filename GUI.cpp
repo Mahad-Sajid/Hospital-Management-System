@@ -3,7 +3,6 @@
 #include "Validator.h"
 #include "SlotUnavailableException.h"
 #include "InsufficientFundsException.h"
-#include <sstream>
 #include <fstream>
 #include <ctime>
 static const sf::Color BG_DARK(12, 12, 14);
