@@ -3,7 +3,7 @@
 #define DOCTOR_H
 
 #include "Person.h"
-
+using namespace std;
 class Doctor : public Person {
 private:
     char specialization[50];
@@ -19,7 +19,7 @@ public:
     ~Doctor();
 
     // Pure virtual implementations
-    void display(std::ostream& os) const override;
+    void display(ostream& os) const override;
     void toCSV(char* buffer) const override;
 
     // Parse from CSV line
@@ -38,7 +38,7 @@ public:
     bool operator==(const Doctor& other) const;
 
     //operator overloading if << for output function
-    friend std::ostream& operator<<(std::ostream& os, const Doctor& d);
+    friend ostream& operator<<(ostream& os, const Doctor& d);
 };
 
 #endif

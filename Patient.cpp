@@ -2,7 +2,7 @@
 // Implementation of Patient class
 
 #include "Patient.h"
-
+using namespace std;
 // Default constructor
 Patient::Patient() : Person(), age(0), balance(0.0f) {
     gender[0] = '\0';
@@ -95,7 +95,7 @@ bool Patient::operator==(const Patient& other) const {
 }
 
 // << for formatted console output
-std::ostream& operator<<(std::ostream& os, const Patient& p) {
+ostream& operator<<(ostream& os, const Patient& p) {
     p.display(os);
     return os;
 }

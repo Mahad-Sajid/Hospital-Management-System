@@ -4,7 +4,7 @@
 
 #ifndef ADMIN_H
 #define ADMIN_H
-
+using namespace std;
 #include "Person.h"
 
 class Admin : public Person {
@@ -17,7 +17,7 @@ public:
     ~Admin();
 
     // Pure virtual implementations
-    void display(std::ostream& os) const override;
+    void display(ostream& os) const override;
     void toCSV(char* buffer) const override;
 
     // Parse from CSV line

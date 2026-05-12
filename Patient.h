@@ -6,7 +6,7 @@
 #define PATIENT_H
 
 #include "Person.h"
-
+using namespace std;
 class Patient : public Person {
 private:
     int age;
@@ -23,7 +23,7 @@ public:
     ~Patient();
 
     // Pure virtual implementations
-    void display(std::ostream& os) const override;
+    void display(ostream& os) const override;
     void toCSV(char* buffer) const override;
 
     // Parse from CSV line
@@ -50,7 +50,7 @@ public:
     bool operator==(const Patient& other) const;
 
     // << for formatted console output
-    friend std::ostream& operator<<(std::ostream& os, const Patient& p);
+    friend ostream& operator<<(ostream& os, const Patient& p);
 };
 
 #endif

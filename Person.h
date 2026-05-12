@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include "MyString.h"
-
+using namespace std;
 class Person {
 protected:
     int id;
@@ -24,7 +24,7 @@ public:
     virtual ~Person();
 
     // Pure virtual methods
-    virtual void display(std::ostream& os) const = 0;
+    virtual void display(ostream& os) const = 0;
     virtual void toCSV(char* buffer) const = 0;
 
     // Getters

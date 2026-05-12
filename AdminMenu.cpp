@@ -52,7 +52,7 @@ void addDoctor(HospitalSystem& sys) {
     char nameBuf[50], specBuf[50], contactBuf[15], passBuf[50], feeBuf[20];
 
     // Name
-    std::cout << "Enter doctor name (max 50 chars): ";
+    cout << "Enter doctor name : ";
     cin.getline(nameBuf, 50);
     MyString::trim(nameBuf);
     if (MyString::isEmpty(nameBuf)) {
@@ -69,7 +69,7 @@ void addDoctor(HospitalSystem& sys) {
         return;
     }
 
-    // Contact (exactly 11 digits)
+    // Contact
     cout << "Enter contact (11 digits): ";
     cin.getline(contactBuf, 15);
     MyString::trim(contactBuf);
@@ -78,8 +78,8 @@ void addDoctor(HospitalSystem& sys) {
         return;
     }
 
-    // Password (min 6 chars)
-    cout << "Enter password (min 6 chars): ";
+    // Password -6
+    cout << "Enter password : ";
     cin.getline(passBuf, 50);
     MyString::trim(passBuf);
     if (!Validator::isValidPassword(passBuf)) {
@@ -103,7 +103,7 @@ void addDoctor(HospitalSystem& sys) {
     sys.doctors.add(newDoc);
     FileHandler::saveDoctors(FilePaths::DOCTORS, sys.doctors);
 
-    std::cout << "Doctor added successfully. ID: " << newId << ".\n";
+    cout << "Doctor added successfully. ID: " << newId << ".\n";
 }
 // Remove Doctor
 

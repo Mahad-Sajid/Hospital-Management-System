@@ -4,11 +4,11 @@
 
 #include <SFML/Graphics.hpp>
 #include <string>
-#include <vector>
 #include "HospitalSystem.h"
 
 // Button 
-struct Button {
+class Button {
+public:
     sf::RectangleShape shape;
     sf::Text           label;
     sf::Color          normalColor;
@@ -25,7 +25,8 @@ struct Button {
 };
 
 // InputField 
-struct InputField {
+class InputField {
+public:
     sf::RectangleShape box;
     sf::Text           text;
     sf::Text           placeholder;

@@ -1,7 +1,6 @@
 #include "HospitalSystem.h"
 #include "FileHandler.h"
 #include "GUI.h"
-#include<windows.h>
 
 // FilePaths definitions
 const char* FilePaths::PATIENTS = "patients.txt";
@@ -14,7 +13,6 @@ const char* FilePaths::SECURITY_LOG = "security_log.txt";
 const char* FilePaths::DISCHARGED = "discharged.txt";
 
 int main() {
-    SetConsoleOutputCP(65001);
     HospitalSystem sys;
 
     try {

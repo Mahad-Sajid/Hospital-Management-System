@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include "MyString.h"
-
+using namespace std;
 class Bill {
 private:
     int billId;
@@ -41,10 +41,10 @@ public:
     void setStatus(const char* status);
 
     // == to compare by ID
-    bool operator==(const Bill& other) const;
+    bool operator==(const Bill& other) const;   
 
     // << for formatted output
-    friend std::ostream& operator<<(std::ostream& os, const Bill& b);
+    friend ostream& operator<<(ostream& os, const Bill& b);
 };
 
 #endif

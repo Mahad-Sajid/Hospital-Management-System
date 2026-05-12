@@ -52,7 +52,7 @@ public:
         return nullptr;
     }
 
-    // Get a const pointer to entity by ID
+    // Get a const pointer to entity by ID  
     const T* findById(int id) const {
         for (int i = 0; i < count; i++) {
             if (data[i].getId() == id) {

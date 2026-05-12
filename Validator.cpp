@@ -41,7 +41,13 @@ bool Validator::isValidDate(const char* date) {
 
     // Validate ranges
     if (month < 1 || month > 12) return false;
-    if (year < getCurrentYear()) return false;
+
+    // Reject any date strictly in the past
+    char today[11];
+    getTodayDate(today);
+    char inputDate[11];
+    MyString::copy(inputDate, date, 11);
+    if (compareDates(inputDate, today) < 0) return false;
 
     int maxDay = 31;
     if (month == 4 || month == 6 || month == 9 || month == 11) {

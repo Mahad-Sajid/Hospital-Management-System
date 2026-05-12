@@ -2,7 +2,7 @@
 // Implementation of Admin class
 
 #include "Admin.h"
-
+using namespace std;
 // Default constructor
 Admin::Admin() : Person() {}
 
@@ -15,7 +15,7 @@ Admin::Admin(int id, const char* name, const char* password)
 Admin::~Admin() {}
 
 // Display admin info
-void Admin::display(std::ostream& os) const {
+void Admin::display(ostream& os) const {
     os << "Admin ID: " << id << "\n"
         << "Name: " << name << "\n";
 }

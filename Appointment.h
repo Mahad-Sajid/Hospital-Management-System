@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include "MyString.h"
-
+using namespace std;
 class Appointment {
 private:
     int appointmentId;
@@ -46,7 +46,7 @@ public:
     bool operator==(const Appointment& other) const;
 
     // << for formatted output
-    friend std::ostream& operator<<(std::ostream& os, const Appointment& a);
+    friend ostream& operator<<(ostream& os, const Appointment& a);
 };
 
 #endif
